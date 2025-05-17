@@ -11,7 +11,7 @@ namespace RentalAPI.Models
         public DateTime? NextAvailableDate { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public required User Landlord { get; set; }
+        public User? Landlord { get; set; }
         public required ICollection<Booking> Bookings { get; set; }
     }
 }
