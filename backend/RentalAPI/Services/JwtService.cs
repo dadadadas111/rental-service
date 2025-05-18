@@ -15,7 +15,7 @@ namespace RentalAPI.Services
             _config = config;
         }
 
-        public string GenerateToken(string userId, string email, string role)
+        public string GenerateFakeToken(string userId, string email, string role)
         {
             var claims = new[]
             {
