@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using RentalAPI.Models;
+using rental_service.Models;
 
-namespace RentalAPI.Data
+namespace rental_service.Data
 {
     public class AppDbContext : DbContext
     {

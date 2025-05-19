@@ -1,4 +1,4 @@
-namespace RentalAPI.Models
+namespace rental_service.Models
 {
     public class Booking
     {
