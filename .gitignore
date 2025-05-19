@@ -3,6 +3,9 @@ bin/
 obj/
 out/
 
+# Environment-specific files
+*.env
+
 # User-specific files
 *.user
 *.suo
