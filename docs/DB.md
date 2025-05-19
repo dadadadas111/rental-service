@@ -15,16 +15,16 @@
 
 | Entity    | Purpose                                |     |
 | --------- | -------------------------------------- | --- |
-| `User`    | Represents both Students and Landlords |     |
+| `User`    | Represents both Customers and Landlords |     |
 | `Listing` | Property posted by a Landlord          |     |
-| `Booking` | Booking requests from students         |     |
-| `Review`  | Feedback from students after stay      |     |
+| `Booking` | Booking requests from Customers         |     |
+| `Review`  | Feedback from Customers after stay      |     |
 
 ---
 
 ## 🧑‍💻 `User`
 
-Represents all users in the system, including students and landlords.  
+Represents all users in the system, including Customers and landlords.  
 User role determines capabilities.
 
 ```csharp
@@ -32,12 +32,12 @@ public class User {
     public Guid Id { get; set; }
     public string FullName { get; set; }
     public string Email { get; set; }
-    public string Role { get; set; } // "Student", "Landlord", "Admin"
+    public string Role { get; set; } // "Customer", "Landlord", "Admin"
     public string PhoneNumber { get; set; }
     public string? FacebookUrl { get; set; }
 
     public ICollection<Listing>? Listings { get; set; }  // If landlord
-    public ICollection<Booking>? Bookings { get; set; }  // If student
+    public ICollection<Booking>? Bookings { get; set; }  // If Customer
 }
 ```
 
@@ -81,13 +81,13 @@ public class Listing {
 
 ## 📅 `Booking`
 
-Represents a booking request from a student to a listing.
+Represents a booking request from a Customer to a listing.
 
 ```csharp
 public class Booking {
     public Guid Id { get; set; }
     public Guid ListingId { get; set; }
-    public Guid StudentId { get; set; }
+    public Guid CustomerId { get; set; }
 
     public DateTime MoveInDate { get; set; }
     public DateTime? MoveOutDate { get; set; }
@@ -96,7 +96,7 @@ public class Booking {
     public string? StripeSessionId { get; set; }
 
     public Listing Listing { get; set; }
-    public User Student { get; set; }
+    public User Customer { get; set; }
 }
 ```
 
@@ -113,7 +113,7 @@ public class Booking {
 
 ## ⭐ `Review`
 
-Written by students **only after their booking ends**.
+Written by Customers **only after their booking ends**.
 
 ```csharp
 public class Review {
@@ -128,7 +128,7 @@ public class Review {
 
 ### Notes:
 
-- Enforce that `Booking.StudentId == User.Id` and that current date is after `MoveOutDate`.
+- Enforce that `Booking.CustomerId == User.Id` and that current date is after `MoveOutDate`.
     
 
 ---
@@ -148,7 +148,7 @@ public class Review {
 
 ### 📍 Overlapping Bookings
 
-When student requests a booking:
+When Customer requests a booking:
 
 ```sql
 SELECT *

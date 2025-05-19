@@ -1,6 +1,6 @@
 ### 📌 Minimum Viable Product (MVP)
 
-**Goal:** Launch a functional platform that lets students find rooms, request & pay for bookings, and lets landlords manage their listings—all within 2 months.
+**Goal:** Launch a functional platform that lets Customers find rooms, request & pay for bookings, and lets landlords manage their listings—all within 2 months.
 
 ---
 
@@ -9,7 +9,7 @@
 |Role|Capabilities in MVP|
 |---|---|
 |**Guest**|Browse & filter listings (read-only)|
-|**Student**|Sign up / sign in (email + Google) → request bookings → pay → leave review after stay|
+|**Customer**|Sign up / sign in (email + Google) → request bookings → pay → leave review after stay|
 |**Landlord**|Sign up / sign in → create / edit / delete own listings (only if no accepted/pending bookings) → view & accept/reject booking requests|
 |**Admin**|Minimal panel: list / deactivate users & listings|
 
@@ -30,23 +30,23 @@
         
 2. **Sign Up / Log In**
     
-    - Role selected at sign-up (student / landlord).
+    - Role selected at sign-up (Customer / landlord).
         
     - Email verification (optional but recommended).
         
 3. **Booking Lifecycle**
     
-    1. Student picks dates → sends booking request.
+    1. Customer picks dates → sends booking request.
         
     2. Landlord sees request in dashboard → Accept / Reject.
         
-    3. If **Accepted** → student is redirected to Stripe Checkout.
+    3. If **Accepted** → Customer is redirected to Stripe Checkout.
         
     4. Payment success marks booking **Confirmed** (stored Stripe session ID).
         
 4. **Review**
     
-    - Student can leave rating + comment **after booking end date**.
+    - Customer can leave rating + comment **after booking end date**.
         
 5. **Email Notifications** (SendGrid):
     

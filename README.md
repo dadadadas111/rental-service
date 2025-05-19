@@ -1,89 +1,83 @@
-# 🏡 Student Accommodation Rental Web App
+# 🏡 Accommodation Rental Web App
 
-A full-stack web application for students to search and book rental properties from landlords. Built with **ASP.NET Core** for the backend and **Next.js** for the frontend, this project provides a clean, secure, and scalable solution for managing student housing.
+A full-stack web application for customers to search and book rental properties from landlords. Built with **ASP.NET Core MVC**, this project provides a simple and secure solution for managing rental bookings.
 
 ---
 
 ## ✨ Features
 
-### 🧑 For Students:
-- Browse and filter listings without login
-- Secure registration & login system
-- Request bookings with specified move-in dates
-- View personal booking history and statuses
-- Leave reviews after completed stays
+### For Customers:
 
-### 🧑‍💼 For Landlords:
-- Register and list rental properties
-- Set availability and pricing per listing
-- Accept or reject student bookings
-- View incoming requests in a personal dashboard
+* Browse and filter listings without login
+* Secure registration & login system
+* Request bookings with preferred move-in dates
+* View personal booking history and statuses
+* Leave reviews after completed stays
 
-### 🔐 Authentication:
-- Role-based access: `Student`, `Landlord`, `Admin`
-- Protected endpoints and frontend routes
+### For Landlords:
 
-### 📬 Notifications:
-- Email notifications on booking updates (via SendGrid)
+* Register and list rental properties
+* Set availability and pricing
+* Accept or reject booking requests
+* Manage listings and bookings via dashboard
 
-### 💸 Payments (Optional):
-- Stripe integration for collecting booking payments
+### Authentication:
+
+* Role-based access: `Customer`, `Landlord`, `Admin`
+* Protected routes and views
+
+### Notifications:
+
+* Email alerts on booking updates (via SendGrid)
 
 ---
 
 ## 🧱 Tech Stack
 
-| Layer     | Technology                 |
-|-----------|----------------------------|
-| Backend   | ASP.NET Core Web API       |
-| ORM       | Entity Framework Core      |
-| Frontend  | Next.js + Tailwind CSS     |
-| Auth      | JWT or ASP.NET Identity    |
-| Database  | PostgreSQL / SQL Server    |
-| Email     | SendGrid or SMTP           |
-| Payments  | Stripe (Optional)          |
-| Deployment| Railway, Azure, Vercel     |
+| Layer              | Technology              |
+| ------------------ | ----------------------- |
+| Backend & Frontend | ASP.NET Core MVC        |
+| ORM                | Entity Framework Core   |
+| Auth               | ASP.NET Identity        |
+| Database           | SQL Server / PostgreSQL |
+| Email              | SendGrid or SMTP        |
+| Hosting            | Azure, Railway          |
 
 ---
 
 ## 📐 Core Entities
 
-- `User` – Shared model for Students and Landlords
-- `Listing` – Property posted by landlords
-- `Booking` – Booking requests and history
-- `Review` – Feedback from students after stay
+* `User` – Shared model for Customers and Landlords
+* `Listing` – Rental property details
+* `Booking` – Booking requests and history
+* `Review` – Feedback from customers
 
 ---
 
 ## 📦 MVP Scope
 
-This version prioritizes:
-- Listings
-- Bookings with date overlap checks
-- Basic dashboards for both roles
-- Authentication with role access control
-
-Deferred:
-- Messaging/chat system
-- Calendar UI for booking
-- Admin dashboard
+* Listings browsing and filtering
+* Booking creation with date validation
+* Dashboards for Customers and Landlords
+* Role-based authentication and authorization
 
 ---
 
 ## ✅ Project Status
 
-> ⏳ In development – 3-week rapid build cycle  
-> Focus: Clean architecture, functional MVP, fast deployment
+> In development — 3-week rapid MVP build cycle
 
 ---
 
 ## 📄 License
 
-This project is built for academic purposes and is not licensed for production use.
+For academic/demo use only.
 
 ---
 
 ## 🙋 Author
 
-**dadadadas111**  
-Student | Developer | Chess & Tetris Enthusiast  
+**dadadadas111**
+Student | Developer | Chess & Tetris Enthusiast
+
+---
