@@ -1,82 +1,92 @@
-# Build results
+# Build output
 bin/
 obj/
 out/
 
-# Environment-specific files
-*.env
-
 # User-specific files
 *.user
-*.suo
 *.userosscache
-*.sln.docstates
+*.suo
+*.userprefs
 
-# OS generated files
+# OS files
 .DS_Store
 Thumbs.db
 
-# Visual Studio Code
+# IDE files
 .vscode/
+.vs/
+.idea/
+*.code-workspace
 
 # Rider
-.idea/
-
-# NuGet
-*.nupkg
-*.snupkg
-.nuget/
-packages/
-project.lock.json
-project.fragment.lock.json
-artifacts/
+*.sln.iml
 
 # Logs
 *.log
 
-# Others
-*.vspscc
-*.vssscc
-*.dbmdl
-*.pdb
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# Publish
-publish/
-*.Publish.xml
-
-# Test results
-TestResults/
-*.trx
-*.coverage
-*.coveragexml
-
-# Local secrets
+# ASP.NET Secrets (use Secret Manager, not in repo)
 secrets.json
 
-# Resharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
+# .NET artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
-# DotCover
-*.dotCover
+# Entity Framework
+Migrations/
 
-# Backup & temp files
-*~
+# Publish output
+wwwroot/dist/
+publish/
+app.publish/
+*.db
+
+# Packages
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Temporary files
 *.tmp
 *.bak
 *.swp
 
-# Rider logs
-.idea/
+# Dependency caches
+node_modules/
+bower_components/
+packages/
+*.tgz
 
-# Windows image file caches
+# Coverage/test files
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+*.testresult
+
+# Environment-specific files
+.env
+.env.*
+
+# JetBrains
+_ReSharper*/
+*.DotSettings.user
+
+# VS Code local history and workspace settings
+.history/
+.vscode-test/
+
+# Deployment
+Dockerfile.*
+docker-compose.*
+*.tar
+*.zip
+
+# SQLite DBs (if used for local dev)
+*.sqlite
+*.sqlite3
+
+# Windows
 ehthumbs.db
-
-# Rider settings
-.idea/
-
-# JetBrains Rider
-.idea/
+desktop.ini
